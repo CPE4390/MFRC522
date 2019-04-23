@@ -1116,7 +1116,7 @@ char PCDSelfTest(char *buffer) {
     PCDClearIRqs();
     PCDWriteFIFO(buffer, 1);
     PCDWriteRegister(CommandReg, CommandCalcCRC);
-    while (PCDGetIRqs() & IdleIRq == 0);
+    while ((PCDGetIRqs() & IdleIRq) == 0);
     status = PCDReadRegister(ErrorReg);
     PCDReadFIFO(buffer, 64, 0);
     return status;

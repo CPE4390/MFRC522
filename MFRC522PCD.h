@@ -20,7 +20,7 @@
  */
 
 //Hardware dependent defines
-#define _XTAL_FREQ      40000000L
+#define _XTAL_FREQ      32000000L
 
 #define PCD_RESET       LATDbits.LATD7
 #define PCD_CS          LATDbits.LATD3
