@@ -24,7 +24,7 @@
 
 #define PCD_RESET       LATDbits.LATD7
 #define PCD_CS          LATDbits.LATD3
-//Set tris bits for the above pins only - SPI pins are handled seperately
+//Set tris bits for the above pins only - SPI pins are handled separately
 #define PCD_TRIS()      TRISD &= 0b01110111; //Set tris bits for the above pins
 
 #define MSSPx           2   //1 or 2 to select MSSP1 or MSSP2 for SPI
